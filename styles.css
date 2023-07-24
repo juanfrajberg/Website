@@ -1,0 +1,280 @@
+/* Propiedades para todo el fondo */
+
+* {
+	* scroll-behavior: smooth; */
+}
+
+/*El código para el subrayado */
+
+*:after {
+	box-sizing: border-box;
+}
+
+#banner h2 {
+	font-size: clamp(3rem, 15vmin, 8rem);
+}
+
+.underlined {
+/*   background: red; */
+position: relative;
+}
+
+.underline-mask:after {
+	content: '';
+	position: absolute;
+	top: 95%;
+	width: 150%;
+	aspect-ratio: 3 / 1;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 50%;
+	border: 6px solid hsl(18 100% 50%);
+	/* Use a conic gradient mask to hide and show the bits you want */
+	--spread: 140deg;
+	--start: 290deg;
+	mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+}
+
+
+.underline-overflow {
+	display: inline-block;
+	/* A little extra padding and overflow hidden   */
+	overflow: hidden;
+	padding-bottom: clamp(1rem, 2vmin, 2rem);
+}
+.underline-overflow:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	height: 150%;
+	aspect-ratio: 2.5 / 1;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	border-radius: 50%;
+	border: 6px solid hsl(18 100% 50%);
+}
+
+.underline-clip:after {
+	content: '';
+	position: absolute;
+	top: 95%;
+	width: 150%;
+	aspect-ratio: 3 / 1;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 50%;
+	border: 6px solid hsl(18 100% 50%);
+	/* Use a clip-path to hide and show the bits you want */
+	clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+
+/* Termina aquí*/
+
+/* Efecto de subrayado */
+
+.underlined {
+	box-shadow: inset 0 0 0 0 #ffbf9e;
+	color: #ff945e;
+	margin: 0 -.25rem;
+	padding: 0 .25rem;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.underlined:hover {
+	box-shadow: inset 100px 0 0 0 #ffbf9e;
+	color: white;
+}
+
+/* Termina aquí */
+
+/* Parte del comienzo */
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#banner h2 {
+	padding-left: 20px;
+	font-size: 40px;
+}
+
+/* Termina aquí */
+
+body {
+	background: #ffede0;
+	margin: 0;
+	padding: 0px;
+	font-family: 'Kanit', sans-serif;
+	user-select: none;
+	border: 7.5px solid #ff8000;
+	cursor: grab;
+}
+
+/* Propiedades para achicar la imagen */
+
+.redes {
+	width: 150px;
+	height: 150px;
+}
+
+/* Propiedades para los títulos y subtítulos */
+h1{
+	margin-top: 0;
+	color: black;
+	font-size: 70px;
+	font-style: bold;
+	text-shadow: 0px 2.5px #ff8000;
+	user-select: none;
+	transition: .4s;
+}
+
+#banner h1:hover {
+	color: #ff8000;
+	text-shadow: 0px 2.5px #000000;
+	font-size: 72px;
+}
+
+h2 {
+	color: black;
+	font-weight: bold;
+	font-size: 28px;
+}
+
+/*Propiedades para los links*/
+a {
+	text-decoration: none;
+	color: blue;
+	font-weight: bold;
+	transition: .4s;
+}
+
+a:hover {
+	text-decoration: none;
+	color: orange;
+}
+
+
+/*Propiedades para id*/
+
+#fotoyo {
+	box-shadow: 0px 0 25px 0px rgba(0, 0, 0, .4);
+	border: 0px solid #ffaa59;
+	transition: .4s;
+}
+
+#fotoyo:hover {
+	box-shadow: 0px 0 50px 0px rgba(0, 0, 0, .4);
+	border: 5px solid #ffc34d;
+}
+
+#subtitulo {
+	font-size: 20px;
+	line-height: 35px;
+	/*font-style: italic;*/
+}
+
+#banner {
+	background-color: #FFE7A0;
+	padding: 10px;
+	margin: 0px 0px;
+	text-align: center; 
+}
+
+#contenido {
+	background-color: #fac5a2;
+	margin: 20px;
+	padding: 12px 0px;
+	text-align: center;
+}
+
+/*Propiedades para clases*/
+.cajas {
+	background-color: #ffe5d4;
+	margin: 20px; 
+	padding: 10px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 10px 10px 16px rgba(0,0,0,0.5);
+}
+
+ul {
+	text-align: center;
+	list-style-position: inside;
+	line-height: 30px;
+}
+
+.cajas h2 {
+	text-shadow: 0px 1.8px #808080;
+	transition: .5s;
+	user-select: none;
+}
+
+.cajas h2:hover {
+	font-size: 45px;
+}
+
+/*estilo para las redes*/
+.redes-sociales {
+	background-color: #FFE7A0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	padding: 20px 50px;
+}
+
+.redes-sociales img {
+	transition: .6s;
+}
+
+.redes-sociales img:hover {
+	width: 165px;
+	height: 165px;
+}
+
+#footer {
+	margin: 5px 0px;
+	padding: 5px;
+	background-color: #FFE7A0;
+	color: rgb(25,25,25);
+	text-align: center;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+@media screen and (max-width:  500px) {
+	.redes {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+img {
+	width: 280px;
+	height: 350px;
+}
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #ffbe4d; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 30px; /* Increase font size */
+	transition: background-color .4s;
+}
+
+#myBtn:hover {
+	background-color: #ffd791; /* Add a dark-grey background on hover */
+}

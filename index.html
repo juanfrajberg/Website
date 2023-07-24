@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Juan Frajberg</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/happyface.ico">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="body">	
+
+	<button onclick="topFunction()" id="myBtn" title="Subir">👆</button>
+
+	<!-- Sección del banner de mi perfil -->
+
+	<div id="banner">
+		<h1>¡Hola! ¡Soy Juan! 😁</h1>
+		<div class="container">
+			<img src="images/boy.jpg" id="fotoyo" alt="Foto de perfil de Juan Manuel Frajberg">		
+			<h2>(Sí, el de la <span class="underlined underline-clip">foto</span>)<br>👈👦</br></h2>
+		</div>
+
+		<p id="subtitulo"><i>Soy argentino, tengo 16 años y vivo en Mendoza.</i> 👋
+			<br>
+			<i>Me gusta la programación, tocar la batería, estudiar inglés y la calistenia.</i> 🌐</p>
+		</div>
+
+		<!-- Sección de las cajas centrales -->
+
+		<div id="contenido">
+
+			<div class="cajas">
+				<h2>Formación estudiantil 📚</h2>
+				<ul>
+					<li>
+						Cursos variados sobre Java, CSS, desarrollo de videojuegos en Unity y Unreal Engine, desarollo de aplicaciones en Android Studio, especialización en Scratch y Arduino.
+					</li>
+					<li>
+						Interés creciente en Inteligencia Artificial y relacionado.
+					</li>
+					<li>
+						Alumno de Informática de la Escuela de Comercio Martín Zapata.
+					</li>
+				</ul>
+			</div>
+
+			<div class="cajas">
+				<h2>Experiencia laboral 📋</h2>
+				<ul>
+					<li>
+						Alumno institucional en <a href="http://www.mzapata.uncuyo.edu.ar" target= "_blank">ECMZ</a> - UNCUYO.
+					</li>
+					<li>
+						Alumno de la Orientación en Informática en <a href="http://www.mzapata.uncuyo.edu.ar" target= "_blank">ECMZ</a> - UNCUYO.
+					</li>
+					<li>
+						Programador y desarrollador en GitHub.
+					</li>
+				</ul>
+			</div>
+
+			<div class="cajas">
+				<h2>Hobbies 😉</h2>
+				<p></p>
+				<ul>
+					<li>
+						Amo entrenar y soy un lector apasionado.
+					</li>
+					<li>
+						Me encanta escuchar música y soy parte de una banda musical.
+					</li>
+				</ul>
+			</div>
+
+			<div class="cajas">
+				<h2>Frase preferida ✅</h2>
+				<p>"La naturaleza reconoce tu esfuerzo y te recompensa con victorias inesperadas." <i>Anónimo.</i></p>
+			</div>
+
+		</div>
+
+		<!-- Sección footer -->
+
+		<div class="redes-sociales">
+
+			<a href="https://www.instagram.com/juanfrajberg" target= "_blank"> <img class="redes" title="Instagram" src="images/Instagram.PNG" alt="Instagram"> </a>
+			<a href="https://twitter.com/juanfrajberg" target= "_blank"> <img class="redes" title="Twitter" src="images/Twitter.PNG" alt="Twitter"> </a>
+			<a href="https://www.github.com/juanfrajberg" target= "_blank"> <img class="redes" title="GitHub" src="images/GitHub.PNG" alt="Facebook"> </a> 
+
+		</div>
+
+		<!--Lo que sigue es otro footer -->
+
+		<div id="footer">
+			<p>🙌 Todos los derechos reservados para <u><a href="mailto: juan.frajberg@gmail.com">Juan Manuel Frajberg</a></u>. 🙌</p>
+		</div>
+
+
+		<script type="text/javascript">
+		// Get the button:
+			let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
+				}
+			}
+
+// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				//document.body.scrollTop = 0; // For Safari
+  //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+				window.scrollTo({top: 0, behavior: 'smooth'});
+			}
+
+			
+		</script>
+
+		<script type="text/javascript">
+			(function(){
+				var curYPos, curXPos, curDown;
+
+				window.addEventListener('mousemove', function(e){ 
+					if(curDown){
+						window.scrollBy(curXPos - e.pageX, curYPos - e.pageY);
+					}
+				});
+
+				window.addEventListener('mousedown', function(e){ 
+					curYPos = e.pageY; 
+					curXPos = e.pageX; 
+					curDown = true; 
+					document.body.style.cursor = 'grabbing';
+				});
+
+				window.addEventListener('mouseup', function(e){ 
+					curDown = false; 
+					document.body.style.cursor = 'grab';
+				});
+			})()
+		</script>
+
+	</body>
+	</html>
